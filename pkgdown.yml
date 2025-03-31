@@ -2,6 +2,6 @@ pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
-  BNFilter-Australia: BNFilter-Australia.html
-  BNFilter-UnitedStates: BNFilter-UnitedStates.html
-last_built: 2025-03-31T21:33Z
+  articles/DNFilter-Australia: DNFilter-Australia.html
+  articles/DNFilter-UnitedStates: DNFilter-UnitedStates.html
+last_built: 2025-03-31T21:45Z
