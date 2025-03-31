@@ -1,18 +1,17 @@
 
 # Beveridge Nelson Filter
 
+This package is a copy of the Beveridge-Nelson Filter R code available at [https://bnfiltering.com/](https://bnfiltering.com/) re-structured 
+as a R package for ease of installation and use. 
+
+Function documentation and examples are available at [https://kletts.github.io/bnfilter/](https://kletts.github.io/bnfilter/). 
+
 ## Installation
 
 Install this package in R as: 
 
 ```
 remotes::install_github("kletts/bnfilter")
-```
-
-If using an renv environment install as: 
-
-```
-renv::install("kletts/bnfilter")
 ```
 
 ## Usage 

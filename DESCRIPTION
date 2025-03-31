@@ -21,3 +21,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://kletts.github.io/bnfilter/
