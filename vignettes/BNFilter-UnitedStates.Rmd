@@ -1,0 +1,50 @@
+---
+title: "Beveridge-Nelson Filter Applied to United States Real Gross Doemstic Product"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BNFilter-UnitedStates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This example uses the updated US GDP dataset through to 2023 Q2. 
+
+```{r setup}
+library(bnfilter)
+data(usgdp)
+plot(usgdp)
+```
+
+Take the log(usgdp) * 100.0
+
+```{r}
+y <- transform_series(y=usgdp, take_log=TRUE, pcode = "p1") 
+```
+
+Example with dynamic demean 
+
+```{r}
+bnfOutput <- bnf(y=y,
+  delta_select = 2,
+  demean = "dm",
+  iterative = 100,
+  dynamic_bands = TRUE,
+  adjusted_bands = TRUE,
+  outliers = c(293, 294),
+  window = 40,
+  ib = TRUE)
+```
+
+United States Output Gap, with adjusted bands and outlier adjustment for COVID19: 
+
+```{r}
+plot(bnfOutput, main = "US Output Gap")
+```
+

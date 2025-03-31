@@ -1,0 +1,59 @@
+---
+title: "Beveridge-Nelson Filter Applied to Australian Real Gross Doemstic Product"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BNFilter-Australia}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(bnfilter)
+data(audata)
+gdp <- ts(audata$GDPC1, start=c(1959,3), freq=4)
+plot(gdp)
+```
+
+```{r}
+y <- transform_series(gdp, take_log=TRUE, pcode="p1")
+```
+
+Example with no demeaning
+
+```{r}
+plot(bnf(y=y, 
+         demean="np"))
+```
+
+Example with dynamic demean 
+
+```{r}
+plot(bnf(y=y, 
+         demean="dm"))
+```
+
+Example with dynamic adjusted confidence bands: 
+
+```{r}
+plot(bnf(y=y, 
+         demean="dm", 
+         adjusted_bands = TRUE))
+```
+
+Example removing outliers for June and September quarters 2020 (COVID19):
+
+```{r}
+plot(bnf(y=y, 
+         demean="dm", 
+         adjusted_bands = TRUE, 
+         outliers = c(244,245)))
+```
+
+
