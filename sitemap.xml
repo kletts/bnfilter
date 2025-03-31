@@ -1,19 +1,19 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>/404.html</loc></url>
-<url><loc>/articles/DNFilter-Australia.html</loc></url>
-<url><loc>/articles/DNFilter-UnitedStates.html</loc></url>
-<url><loc>/articles/index.html</loc></url>
-<url><loc>/authors.html</loc></url>
-<url><loc>/index.html</loc></url>
-<url><loc>/reference/as.data.frame.bnfClass.html</loc></url>
-<url><loc>/reference/audata.html</loc></url>
-<url><loc>/reference/bnf.html</loc></url>
-<url><loc>/reference/index.html</loc></url>
-<url><loc>/reference/piecewise_demean.html</loc></url>
-<url><loc>/reference/plot.bnfClass.html</loc></url>
-<url><loc>/reference/print.bnfClass.html</loc></url>
-<url><loc>/reference/transform_series.html</loc></url>
-<url><loc>/reference/usdata.html</loc></url>
-<url><loc>/reference/usgdp.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/404.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/articles/DNFilter-Australia.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/articles/DNFilter-UnitedStates.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/articles/index.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/authors.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/index.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/as.data.frame.bnfClass.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/audata.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/bnf.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/index.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/piecewise_demean.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/plot.bnfClass.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/print.bnfClass.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/transform_series.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/usdata.html</loc></url>
+<url><loc>https://kletts.github.io/bnfilter/reference/usgdp.html</loc></url>
 </urlset>
 
