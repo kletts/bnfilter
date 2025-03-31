@@ -1,8 +1,8 @@
 ---
-title: "Beveridge-Nelson Filter Applied to United States Real Gross Doemstic Product"
+title: "Beveridge-Nelson Filter United States"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{BNFilter-UnitedStates}
+  %\VignetteIndexEntry{Beveridge-Nelson Filter United States}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,9 +17,8 @@ knitr::opts_chunk$set(
 This example uses the updated US GDP dataset through to 2023 Q2. 
 
 ```{r setup}
-library(bnfilter)
-data(usgdp)
-plot(usgdp)
+library(bnfilter) 
+load("../data/usgdp.rda")
 ```
 
 Take the log(usgdp) * 100.0
@@ -44,7 +43,7 @@ bnfOutput <- bnf(y=y,
 
 United States Output Gap, with adjusted bands and outlier adjustment for COVID19: 
 
-```{r}
+```{r fig.width = 7, fig.height = 5}
 plot(bnfOutput, main = "US Output Gap")
 ```
 

@@ -251,7 +251,6 @@ bnf <- function(y,
                 window = 40,
                 ib = TRUE,
                 ...) {
-    source("R/bnf_fcns.R")
     # Demean dy
     demean <- match.arg(demean)
     if (demean != 'dm' && iterative != 0) {
