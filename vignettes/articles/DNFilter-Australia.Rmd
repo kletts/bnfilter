@@ -1,10 +1,5 @@
 ---
 title: "Beveridge-Nelson Filter Australia"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Beveridge-Nelson Filter Australia}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -16,7 +11,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(bnfilter)
-load("../data/audata.rda")
+load("../../data/audata.rda")
 ```
 
 Load the GDP data from the package dataset
@@ -62,5 +57,3 @@ plot(bnf(y=y,
          adjusted_bands = TRUE, 
          outliers = c(244,245)))
 ```
-
-

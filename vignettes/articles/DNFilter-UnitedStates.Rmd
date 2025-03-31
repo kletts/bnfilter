@@ -1,10 +1,5 @@
 ---
 title: "Beveridge-Nelson Filter United States"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Beveridge-Nelson Filter United States}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -14,11 +9,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+
 This example uses the updated US GDP dataset through to 2023 Q2. 
 
 ```{r setup}
-library(bnfilter) 
-load("../data/usgdp.rda")
+library(bnfilter)
+load("../../data/usgdp.rda")
 ```
 
 Take the log(usgdp) * 100.0
