@@ -616,6 +616,9 @@ plot.bnfClass <- function(x,
 #'  - cycle
 #'  - cycle_se
 #'  - cycle_ci
+#' If adjusted standard errors are applied
+#'  - cycle_adjusted_se
+#'  - cycle_ci_adjusted
 #' @export
 as.data.frame.bnfClass <- function(x) {
     stopifnot(inherits(x, "bnfClass"))
@@ -624,6 +627,6 @@ as.data.frame.bnfClass <- function(x) {
         xn <- c(xn, "cycle_adjusted_se", "cycle_ci_adjusted") }
     df <- data.frame(lapply(setNames(xn, xn), \(xi) as.vector(x[[xi]])))
     if (inherits(x$y, "ts")) {
-        df <- data.frame(time=time(x$y), df) }
+        df <- data.frame(time=as_date(x$y), df) }
     return(df)
     }
