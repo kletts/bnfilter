@@ -1,5 +1,5 @@
 
-# Beveridge Nelson Filter
+# Beveridge-Nelson Filter
 
 This package is a copy of the Beveridge-Nelson Filter R code available at [https://bnfiltering.com/](https://bnfiltering.com/) re-structured 
 as a R package for ease of installation and use. 
@@ -16,13 +16,13 @@ remotes::install_github("kletts/bnfilter")
 
 ## Usage 
 
-1. Data preparation, see function `bnfilter::transform_series`: to apply series differencing
+1. Data preparation, see function `bnfilter::transform_series()`: to apply series differencing
 
 2. Filtering: see function `bnfilter::bnf()` 
 
-3. Plot cycle and cycle confidence interval: see method `plot()`
+3. Plot cycle and cycle confidence interval: see method `bnfilter::plot()`
 
-4. Extract original, trend, cycle and cycle confidence interval: see method `to.data.frame()`
+4. Extract original, trend, cycle and cycle confidence interval: see method `bnfilter::to.data.frame()`
 
 ## Notes from the authors 
 
