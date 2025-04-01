@@ -60,5 +60,13 @@ James Morley<br>
 Benjamin Wong<br>
 February 2025
 
+## References 
+
+- **KMW2018**: Kamber G, Morley J, Wong B (2018). “Intuitive and Reliable Estimates of the Output
+  Gap from a Beveridge-Nelson Filter.” The Review of Economics and Statistics, 100(3),
+  550-566. ISSN 0034-6535.
+  
+- **KMW2025**: Kamber G, Morley J, Wong B (2025). “Trend-cycle decomposition in the presence of
+  large shocks.” Journal of Economic Dynamics and Control, 173, 105066. ISSN 0165-1889.
 
 

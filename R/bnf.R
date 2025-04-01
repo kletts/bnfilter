@@ -208,8 +208,11 @@ rolling_demean <- function(y, y_cycle, wind) {
 #' set to TRUE if iterative backcasting
 #' @param ... passed into error bands and piecewise_demean function
 #' @references
-#'  - \insertRef{KMW2018}{bnfilter}
-#'  - \insertRef{KMW2025}{bnfilter}
+#'  - Kamber G, Morley J, Wong B (2018). “Intuitive and Reliable Estimates of the Output
+#'  Gap from a Beveridge-Nelson Filter.” The Review of Economics and Statistics, 100(3),
+#'  550-566. ISSN 0034-6535,.
+#'  - Kamber G, Morley J, Wong B (2025). “Trend-cycle decomposition in the presence of
+#'  large shocks.” Journal of Economic Dynamics and Control, 173, 105066. ISSN 0165-1889.
 #' @returns List of class "bnf" containing:
 #'  - call
 #'  - y
@@ -224,7 +227,6 @@ rolling_demean <- function(y, y_cycle, wind) {
 #'  - cycle_ci_adjusted
 #'  - iterations
 #' @export
-#' @importFrom Rdpack reprompt
 #' @examples
 #' data(usdata)
 #' y <- transform_series(y = usdata$GDPC1, take_log = TRUE, pcode = "p1")

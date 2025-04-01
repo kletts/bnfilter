@@ -89,7 +89,10 @@ bnfOutput <- bnf(as.vector(y),
 }
 \references{
 \itemize{
-\item \insertRef{KMW2018}{bnfilter}
-\item \insertRef{KMW2025}{bnfilter}
+\item Kamber G, Morley J, Wong B (2018). “Intuitive and Reliable Estimates of the Output
+Gap from a Beveridge-Nelson Filter.” The Review of Economics and Statistics, 100(3),
+550-566. ISSN 0034-6535,.
+\item Kamber G, Morley J, Wong B (2025). “Trend-cycle decomposition in the presence of
+large shocks.” Journal of Economic Dynamics and Control, 173, 105066. ISSN 0165-1889.
 }
 }

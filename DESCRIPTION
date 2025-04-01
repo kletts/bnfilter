@@ -13,8 +13,6 @@ Description: This code calculates the BN filter output gap with the automatic si
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: Rdpack 
-RdMacros: Rdpack
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Suggests: 
