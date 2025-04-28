@@ -19,6 +19,12 @@ A data frame including:
 \item cycle_se
 \item cycle_ci
 }
+
+If adjusted standard errors are applied
+\itemize{
+\item cycle_adjusted_se
+\item cycle_ci_adjusted
+}
 }
 \description{
 Convert list object output to a data frame

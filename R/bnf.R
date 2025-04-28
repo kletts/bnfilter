@@ -616,6 +616,7 @@ plot.bnfClass <- function(x,
 #'  - cycle
 #'  - cycle_se
 #'  - cycle_ci
+#'
 #' If adjusted standard errors are applied
 #'  - cycle_adjusted_se
 #'  - cycle_ci_adjusted

@@ -20,9 +20,9 @@ remotes::install_github("kletts/bnfilter")
 
 2. Filtering: see function `bnfilter::bnf()` 
 
-3. Plot cycle and cycle confidence interval: see method `bnfilter::plot()`
+3. Plot cycle and cycle confidence interval: see method `plot()`
 
-4. Extract original, trend, cycle and cycle confidence interval: see method `bnfilter::to.data.frame()`
+4. Extract original, trend, cycle and cycle confidence interval: see method `to.data.frame()`
 
 ## Notes from the authors 
 
