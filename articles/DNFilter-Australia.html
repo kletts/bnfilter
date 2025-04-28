@@ -65,9 +65,18 @@
 
     
     
+<p>The package includes the latest Australian real/chain volume GDP and
+the Unemployment Rate through to December quarter 2024.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kletts.github.io/bnfilter/">bnfilter</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="st">"../../data/audata.rda"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="va">audata</span><span class="op">)</span></span>
+<span><span class="co">#&gt;           date   UNRATE  GDPC1</span></span>
+<span><span class="co">#&gt; 257 2023-09-01 3.603829 649635</span></span>
+<span><span class="co">#&gt; 258 2023-12-01 3.972668 650218</span></span>
+<span><span class="co">#&gt; 259 2024-03-01 3.861293 651335</span></span>
+<span><span class="co">#&gt; 260 2024-06-01 4.067915 652593</span></span>
+<span><span class="co">#&gt; 261 2024-09-01 4.073059 654676</span></span>
+<span><span class="co">#&gt; 262 2024-12-01 3.971081 658495</span></span></code></pre></div>
 <p>Load the GDP data from the package dataset</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/ts.html" class="external-link">ts</a></span><span class="op">(</span><span class="va">audata</span><span class="op">$</span><span class="va">GDPC1</span>, start<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1959</span>,<span class="fl">3</span><span class="op">)</span>, freq<span class="op">=</span><span class="fl">4</span><span class="op">)</span></span>
@@ -96,7 +105,7 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="../reference/bnf.html">bnf</a></span><span class="op">(</span>y<span class="op">=</span><span class="va">y</span>, </span>
 <span>         demean<span class="op">=</span><span class="st">"dm"</span>, </span>
-<span>         adjusted_bands <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>         dynamic_bands <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in matrix(data = c(1, 2), nrow = 1, ncol = 1): data length differs from</span></span>
 <span><span class="co">#&gt; size of matrix: [2 != 1 x 1]</span></span></code></pre></div>
 <p><img src="DNFilter-Australia_files/figure-html/unnamed-chunk-6-1.png" width="672"></p>
