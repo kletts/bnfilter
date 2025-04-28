@@ -9,12 +9,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 This example uses the updated US GDP dataset through to 2023 Q2. 
 
 ```{r setup}
 library(bnfilter)
-load("../../data/usgdp.rda")
+head(usgdp)
 ```
 
 Take the log(usgdp) * 100.0

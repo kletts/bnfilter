@@ -9,9 +9,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+The package includes the latest Australian real/chain volume GDP and the Unemployment Rate through to December quarter 2024. 
+
 ```{r setup}
 library(bnfilter)
-load("../../data/audata.rda")
+tail(audata)
 ```
 
 Load the GDP data from the package dataset
@@ -46,7 +48,7 @@ Example with dynamic adjusted confidence bands:
 ```{r fig.width = 7, fig.height = 5}
 plot(bnf(y=y, 
          demean="dm", 
-         adjusted_bands = TRUE))
+         dynamic_bands = TRUE))
 ```
 
 Example removing outliers for June and September quarters 2020 (COVID19):
