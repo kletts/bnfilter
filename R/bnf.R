@@ -102,7 +102,7 @@ transform_series <- function(y,
 #' @export
 #' @examples
 #' data(usdata)
-#' piecewise_demean(usdata$GDPC1, breaks=c(100,200))
+#' head(piecewise_demean(usdata$GDPC1, breaks=c(100,200)))
 piecewise_demean <- function(y, breaks = c()) {
     # Preliminary stuff
     y <- as.matrix(y)
@@ -150,9 +150,9 @@ piecewise_demean <- function(y, breaks = c()) {
 #' Rolling Demean
 #' @description
 #' Demean time series relative to a backward rolling window 'wind'
-#' @param y Numeric vector
-#' @param y_cycle Numeric vector
-#' @param wind Integer, window width
+#' @param y Numeric vector, a time series, eg of class ts
+#' @param y_cycle Numeric vector, a time series of cycle, must be length of y, can be zeros
+#' @param wind Integer, rolling window width
 #' @returns Numeric vector
 #' @noRd
 rolling_demean <- function(y, y_cycle, wind) {
@@ -213,7 +213,7 @@ rolling_demean <- function(y, y_cycle, wind) {
 #'  550-566. ISSN 0034-6535,.
 #'  - Kamber G, Morley J, Wong B (2025). “Trend-cycle decomposition in the presence of
 #'  large shocks.” Journal of Economic Dynamics and Control, 173, 105066. ISSN 0165-1889.
-#' @returns List of class "bnf" containing:
+#' @returns List of class "bnfClass" containing:
 #'  - call
 #'  - y
 #'  - cycle
@@ -397,8 +397,8 @@ bnf <- function(y,
 
 
 #' Print
-#' @description Print method for class "bnf"
-#' @param x object of class bnf output of [bnf]
+#' @description Print method for class "bnfClass"
+#' @param x object of class bnfClass output of [bnf]
 #' @param digits integer, significant digits in print, default `getOption("digits") - 3`
 #' @param ... further arguments, not used
 #' @returns Nothing
@@ -437,7 +437,7 @@ print.bnfClass <- function(x,
 
 #' Plot
 #' @description Plot method for object of class "bnf"
-#' @param x object of class "bnf" output of [bnf]
+#' @param x object of class "bnfClass" output of [bnf]
 #' @param main character, plot title
 #' @param plot_ci logical, include cycle confidence interval
 #' @param col character, primary color or hexcode
@@ -623,6 +623,10 @@ plot.bnfClass <- function(x,
 #' @export
 as.data.frame.bnfClass <- function(x) {
     stopifnot(inherits(x, "bnfClass"))
+    as_date <- function(ts) {
+        ti <- time(ts)
+        as.Date(paste(ti %/% 1, round((ti %% 1)*12+1), 1, sep="-"), "%Y-%m-%d")
+    }
     xn <- c("y", "trend", "cycle", "cycle_se", "cycle_ci")
     if ("cycle_ci_adjusted" %in% names(x)) {
         xn <- c(xn, "cycle_adjusted_se", "cycle_ci_adjusted") }

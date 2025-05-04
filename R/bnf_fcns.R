@@ -790,7 +790,4 @@ select_delta <- function(y, p, ib, delta_select, d0, dt)
   return (delta_grid)
 }
 
-as_date <- function(ts) {
-  ti <- time(ts)
-  as.Date(paste(ti %/% 1, (ti %% 1)*12+1, 1, sep="-"), "%Y-%m-%d")
-  }
+
